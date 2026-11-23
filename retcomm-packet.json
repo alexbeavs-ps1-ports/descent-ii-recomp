@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "descent-ii-psx",
+  "name": "Descent II",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "descent-ii-recomp",
+  "rom_identity": {
+    "crc32": [
+      "cdc0a7e7"
+    ],
+    "md5": [
+      "06c775c30255b51eb8124af4ed4f1f5e"
+    ],
+    "sha1": [
+      "1a2d3ac3c919b64e42bed7df44b15dd1f8bfcde0"
+    ],
+    "disc_serials": [
+      "SLES-00558"
+    ],
+    "sizes": [
+      567328272
+    ],
+    "filenames": [
+      "Descent II (Europe).cue",
+      "Descent II (Europe).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "31a95eb02e6be8f1772ad8ddb7f4a3fe07408c86357d0eee30ccccccffd0398d"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH5552.BIN",
+    "profile": "SCPH5552",
+    "crc32": [
+      "d786f0b9"
+    ],
+    "md5": [
+      "32736f17079d0b2b7024407c39bd3050"
+    ],
+    "sha1": [
+      "f6bc2d1f5eb6593de7d089c425ac681d6fffd3f0"
+    ],
+    "sha256": [
+      "1faaa18fa820a0225e488d9f086296b8e6c46df739666093987ff7d8fd352c09"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH5552.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/descent-ii-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "descent-ii-*-windows-x64.zip",
+      "linux-x64": "descent-ii-*-linux-x64.zip",
+      "macos-arm64": "descent-ii-*-macos-arm64.zip",
+      "macos-x64": "descent-ii-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "descent_ii.exe",
+    "linux": "descent_ii",
+    "macos": "descent_ii"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/descent-ii-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}

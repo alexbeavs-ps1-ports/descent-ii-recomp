@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Descent II",
+    "id": "SLES-00558",
+    "boot_exe": "SLES_005.58"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "Europe",
+    "players": 1
+  },
+  "rom_identity": {
+    "cue_name": "Descent II (Europe).cue",
+    "bin_name": "Descent II (Europe).bin",
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 567328272,
+      "md5": "06c775c30255b51eb8124af4ed4f1f5e",
+      "sha1": "1a2d3ac3c919b64e42bed7df44b15dd1f8bfcde0",
+      "crc32": "cdc0a7e7"
+    },
+    "disc_fp": "31a95eb02e6be8f1772ad8ddb7f4a3fe07408c86357d0eee30ccccccffd0398d"
+  },
+  "exe": {
+    "load_address": "0x80010010",
+    "entry_pc": "0x800905A8",
+    "text_size": "0x000D4800",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 1521,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [
+    "cue has only 1 TRACK — Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
